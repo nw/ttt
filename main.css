@@ -1,0 +1,46 @@
+body {
+  padding: none;
+  margin: none;
+  background: #eee;
+}
+
+#container {
+  width: 80%;
+  padding: 5%;
+  margin: 40px auto;
+  border: 1px solid #999;
+  background: #fff;
+}
+
+table {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  border-style: collapse;
+}
+
+td {
+  width: 33%;
+  height: 33%;
+  border: 1px solid #999;
+  text-align: center;
+  vertical-align: center;
+  font-size: 96px;
+  font-family: arial;
+}
+
+tr:first-child td {
+  border-top: none;
+}
+
+td:first-child {
+  border-left: none;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+td:last-child {
+  border-right: none;
+}
