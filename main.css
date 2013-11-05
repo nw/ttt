@@ -5,8 +5,9 @@ body {
 }
 
 #container {
+  position: relative;
   width: 80%;
-  padding: 5%;
+  padding: 8% 5%;
   margin: 40px auto;
   border: 1px solid #999;
   background: #fff;
@@ -43,4 +44,14 @@ tr:last-child td {
 
 td:last-child {
   border-right: none;
+}
+
+#status {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  height: 40px;
+  background: #eaeaea;
+  border-top: 1px solid #999;
 }
