@@ -14,7 +14,7 @@ var player1 = { active: true, win: false },
         var $target = $(ev.target);
         
         if($target.html() === '') {
-            $(ev.target).html(player1.active ? 'X' : 'O');
+            $target.html(player1.active ? 'X' : 'O');
         
             app.updatePieces();
             player1.active = !player1.active;
@@ -31,10 +31,8 @@ var player1 = { active: true, win: false },
         });
     },
     
-    resetBoard: function() {
-        $('td').each(function() {
-            $(this).html('');
-        });
+    resetBoard: function() { 
+        $('td').html('');
         
         app.updatePieces();
         player1 = {active: true, win: false };
