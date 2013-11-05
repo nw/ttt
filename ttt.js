@@ -3,6 +3,7 @@ var player1 = { active: true },
     player2 = { active: false },
     savedPieces = [[],[],[]],
     $board = $('table'),
+    
     app = {
     init: function() {
         $board
@@ -27,8 +28,13 @@ var player1 = { active: true },
                 savedPieces[i][i2] = $(this).html();
             });
         });
-    }
-            
+    },
+    
+    clearPieces: function() {
+        $('td').each(function() {
+            $(this).html('');
+        });
+    }          
 };
  
 $(function() {
