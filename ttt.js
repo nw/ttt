@@ -31,14 +31,14 @@ var player1 = { active: true, win: false },
         });
     },
     
-    clearPieces: function() {
+    resetBoard: function() {
         $('td').each(function() {
             $(this).html('');
         });
         
         app.updatePieces();
-        player1.active = true;
-        player1.active = false;
+        player1 = {active: true, win: false };
+        player2 = {active: false, win: false };
     },
     
     check: {
@@ -67,7 +67,7 @@ var player1 = { active: true, win: false },
         
             if(player1.win || player2.win) {
                 alert(player1.win ? 'Player 1 Wins!' : 'Player 2 Wins!');
-                app.clearPieces();
+                app.resetBoard();
             }
         }
     }
