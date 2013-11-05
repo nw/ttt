@@ -1,7 +1,7 @@
 'use strict';
 var player1 = { active: true },
     player2 = { active: false },
-    savedPieces = [],
+    savedPieces = [[],[],[]],
     $board = $('table'),
     app = {
     init: function() {
@@ -10,14 +10,24 @@ var player1 = { active: true },
     },
     
     placePiece: function(ev) {
-        $(ev.target).html(player1.active ? 'X' : 'O');
+        var $target = $(ev.target);
         
-        player1.active = !player1.active;
-        player2.active = !player2.active;
+        if($target.html() === '') {
+            $(ev.target).html(player1.active ? 'X' : 'O');
+        
+            app.updatePieces();
+            player1.active = !player1.active;
+            player2.active = !player2.active;
+        }
     },
     
     updatePieces: function() {
-        $board.each(function() {
+        $('tr').each(function(i) {
+            $(this).find('td').each(function(i2) {
+                savedPieces[i][i2] = $(this).html();
+            });
+        });
+    }
             
 };
  
