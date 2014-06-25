@@ -30,6 +30,10 @@ td {
   font-family: arial;
 }
 
+td.red {
+  color: red !important;
+}
+
 tr:first-child td {
   border-top: none;
 }
@@ -54,4 +58,12 @@ td:last-child {
   height: 40px;
   background: #eaeaea;
   border-top: 1px solid #999;
+}
+
+#whos_turn {
+  display: inline-block;
+}
+
+#reset {
+  float: right;
 }
