@@ -5,6 +5,7 @@ $(document).ready(function(){
   var current = 0;
   var msg = $('#msg');
   var whos_turn = $('#whos_turn');
+  var total_moves = 0;
   var game_over = false;
 
   $('tr').each(function(){
@@ -22,7 +23,9 @@ $(document).ready(function(){
     if(game_over) return;
   
     if(el.text() !== '') return msg.text('already set');
-    
+
+    total_moves++;
+
     msg.text("");
   
     el.text(players[current]);
@@ -32,22 +35,13 @@ $(document).ready(function(){
     whos_turn.text('player '+ (current+1));
   
     checkForWin();
-    checkForNoMoreMoves();
+
+    if(total_moves === 9 && game_over === false){
+        game_over = true;
+        msg.text("game over. no moves left");
+    }
+      
   }
-
-   function checkForNoMoreMoves(){
-       if(game_over) return;
-       already_played = 0;
-       $('td').each(function(){
-           if($(this).text()) already_played++;
-       });
-
-       if(already_played === 9){
-           game_over = true;
-           msg.text("game over. no moves left");
-       }
-
-   }
 
   function checkForWin(){ 
     // horizontal rows
@@ -107,6 +101,7 @@ $(document).ready(function(){
     msg.text('');
     whos_turn.text('player '+ (current+1));
     game_over = false;
+    total_moves = 0;
   }
 
 });
