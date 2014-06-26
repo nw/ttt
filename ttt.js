@@ -32,7 +32,22 @@ $(document).ready(function(){
     whos_turn.text('player '+ (current+1));
   
     checkForWin();
+    checkForNoMoreMoves();
   }
+
+   function checkForNoMoreMoves(){
+       if(game_over) return;
+       already_played = 0;
+       $('td').each(function(){
+           if($(this).text()) already_played++;
+       });
+
+       if(already_played === 9){
+           game_over = true;
+           msg.text("game over. no moves left");
+       }
+
+   }
 
   function checkForWin(){ 
     // horizontal rows
