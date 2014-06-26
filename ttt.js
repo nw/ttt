@@ -1,6 +1,5 @@
-$(function(){
+$(document).ready(function(){
 
-  var table = $('table');
   var board = [];
   var players = [ 'x', 'o' ];
   var current = 0;
@@ -56,9 +55,9 @@ $(function(){
   
   function checkRow(row){
     var matches = 0
-      , val = row[0].innerText;
+      , val = $(row[0]).text();
     row.forEach(function(cell){
-      if(cell.innerText === val) matches++;
+      if($(cell).text() === val) matches++;
     });
     
     return (matches === 3 && val);
