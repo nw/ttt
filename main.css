@@ -1,6 +1,6 @@
 body {
-  padding: none;
-  margin: none;
+  padding: 0;
+  margin: 0;
   background: #eee;
 }
 
@@ -17,7 +17,7 @@ table {
   width: 500px;
   height: 500px;
   margin: auto;
-  border-style: collapse;
+  border-collapse: collapse;
 }
 
 td {
@@ -25,7 +25,7 @@ td {
   height: 33%;
   border: 1px solid #999;
   text-align: center;
-  vertical-align: center;
+  vertical-align: middle;
   font-size: 96px;
   font-family: arial;
 }
