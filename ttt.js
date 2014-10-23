@@ -49,7 +49,7 @@ $(document).ready(function(){
 
     // in our current td element we need to mark it with the player piece.
     // we write a simple text value into the html element.
-    // we lookup in our players array using the current variable as in index.
+    // we lookup in our players array using the `current` variable as in index.
     // this would return the string value 'x' or 'o'
     el.text(players[current]); // write it to the element.
 
@@ -62,7 +62,7 @@ $(document).ready(function(){
 
     // we updates the current player index above. Now we need to communicate to the players whos turn it is.
     // we add 1 to the current index since arrays are based off a 0 index.
-    // we right this into our whos_turn element.
+    // we write this into our whos_turn element.
     whos_turn.text('player ' + (current + 1)); // note: setting text like this overrides any previous values, it does not append.
 
     // since a play has happened we need to check to see if we have a winner.
