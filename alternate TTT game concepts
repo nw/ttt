@@ -1,0 +1,18 @@
+/* javascript to play tic-tac-toe. 
+-NOV 4.2013 
+
+M * U * S * I * C * A * L ** C * H * A * I * R * S ** Tic - Tac - Toe * : A GAME OF SKILL AND REFLEXES >> works in Solo or Multi-Player mode!
+
+no  >1.     make the board into a form, so each data box has 2 choices; X or O in a button
+
+YES >2.     animate! 
+    • the ttt board starts out Blank, with nothing VISIBLE in data squares
+    • wen GO! butn is clicked, each square blinks "X" and "O" rapidly & randomly (like strobe flashing). 
+    • The user's 'click' on any of the flashing squares stops the flashing, and displays X, Y, or blank, —— whichever one it happens to be 'caught' at the moment (a little too fast for the user to know/control)
+    • add a RANDOMIZER level that changes speeds and pattern of letter repetition—— it will never be predictable. flashing can be a slow pulse, then speed up ...
+    
+    3. a separate event stops ALL 9 squares at once simultaneously and freezes the board. 
+    4. Each of the 9 squares has only 1 of 3 possible states at any given moment: X, Y, or BLANK.
+    5. IF a tic-tac-toe is acheived, the color of the three X's or O's in the row changes to GREEN 
+    6. Ta-daa!
+*/
